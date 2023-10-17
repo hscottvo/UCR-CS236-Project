@@ -1,0 +1,10 @@
+version: '3'
+services:
+  pyspark_project:
+    build: .
+    volumes:
+      - ./src:/home/jovyan/src
+      - ./data:/home/jovyan/data
+    ports:
+      - 8888:8888
+
