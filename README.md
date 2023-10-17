@@ -35,7 +35,7 @@ In this project you will be using data from the USDA's Food Environment Atlas.
 
 [Data Source](https://www.ers.usda.gov/data-products/food-environment-atlas/data-access-and-documentation-downloads/)
 
-Scroll down to `Data Set` $\rarr$ `Food and Environment Atlas .csv Files` to download the data. Extract all of the files into the `data/` directory of your git repo.
+Scroll down to `Data Set -> Food and Environment Atlas .csv Files` to download the data. Extract all of the files into the `data/` directory of your git repo.
 
 ## Running Code
 
