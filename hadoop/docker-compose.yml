@@ -1,0 +1,33 @@
+# version: '3'
+# services:
+#   hadoop_dev:
+#     build: .
+#     volumes:
+#       - ./src:/home/src
+#       - ./data:/home/data
+#     working_dir: /home
+#     command: ["/bin/bash"]
+#     # ports:
+#     #   - 8888:8888
+
+version: '3'
+services:
+  hadoop:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      # - ./src:/home/src
+      - ./data:/home/data
+      - ./CS236_project:/home/CS236_project
+      # - ./hadoop-3.3.6.tar.gz:/home/hadoop-3.3.6.tar.gz
+      # - ./pom.xml:/home/pom.xml
+    container_name: hadoop_dev
+    ports:
+      - 9000:9000
+    tty: true
+    stdin_open: true
+    environment:
+      - HADOOP_HOME=/opt/hadoop
+      - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+    command: ["/bin/bash"]
