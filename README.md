@@ -90,7 +90,7 @@ Run the command `docker compose exec hadoop bash` to run bash int he container. 
 
 #### Note for Mac users with Apple Silicon (M1 and M2)
 
-Whenever you bash into the container, you need to reset `JAVA_HOME`. To do this, run the following two commands:
+Whenever you bash into the container, you need to reset `JAVA_HOME`. To do this, run the following two commands while in the container:
 
 ```bash
 unset JAVA_HOME
