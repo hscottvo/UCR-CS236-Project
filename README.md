@@ -6,6 +6,10 @@
     - [Project Setup](#project-setup)
     - [Getting Data](#getting-data)
   - [Running Code](#running-code)
+    - [Spark](#spark)
+    - [Hadoop](#hadoop)
+      - [Note for Mac users with Apple Silicon (M1 and M2)](#note-for-mac-users-with-apple-silicon-m1-and-m2)
+      - [Hadoop (Continued)](#hadoop-continued)
   - [Project Info](#project-info)
     - [Getting Started](#getting-started)
     - [Task 1](#task-1)
@@ -27,7 +31,7 @@ Go to [the Docker website](https://www.docker.com/get-started/), download the in
 
 ### Project Setup
 
-Simply clone this repository and cd into it. You will see `data/`, which will be where you put your data files. You will also see `src/`, where your notebooks will be.
+Clone this repository and cd into it. You will see `<framework>/data/`, which will be where you put your data files. You will also see `spark/src/` and `hadoop/CS236_project`, where your notebooks will be.
 
 ### Getting Data
 
@@ -58,7 +62,9 @@ ports:
     - 8888:8888
 ```
 
-To run the Spark environment in Jupyter Notebook, run `docker compose up` in your terminal, in the same directory as `docker-compose.yml`
+### Spark
+
+To run the Spark environment in Jupyter Notebook, run `docker compose build`, then `docker compose up` in your terminal, in the same directory as `docker-compose.yml`. For future runs, you only need to run `docker compose up`.
 
 Look for this text in the terminal output:
 
@@ -74,9 +80,44 @@ Open the second url (the one that starts with `127.0.0.1`) to open Jupyter Lab. 
 
 You will be using Jupyter Notebook to run your Python/PySpark code. See the [Jupyter docs](https://docs.jupyter.org/en/latest/) for more info.
 
+### Hadoop
+
+Running Hadoop code is a little more complicated. First, download the [Hadoop binaries](https://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz) and put the file in the `hadoop/` directory. Then, run `docker compose build`. This will take about 10 minutes.
+
+To start the Docker container, uuuuu the command `docker compose up -d`. Note that we add `-d`. This is because we want to run the container in detached mode so we can use the same terminal while the container runs. To run the code, we will run bash inside the container.
+
+Run the command `docker compose exec hadoop bash` to run bash int he container. Then, go to `/home/CS236_project`.
+
+#### Note for Mac users with Apple Silicon (M1 and M2)
+
+Whenever you bash into the container, you need to reset `JAVA_HOME`. To do this, run the following two commands:
+
+```bash
+unset JAVA_HOME
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-arm64
+```
+
+#### Hadoop (Continued)
+
+Whenever your code is ready to recompile, run the command `mvn package`. This will compile your Java code into a jar.
+
+To run the jar in Hadoop, run the following command:
+
+```bash
+hadoop jar target/CS236_project-1.0-SNAPSHOT.jar <path_to_input_file> <path_to_output_directory>
+```
+
+Note that the output directory must not exist before running Hadoop.
+
+To see how long the Hadoop code took to run, refer to `hadoop/execution_time.txt`.
+
+Look through `hadoop/CS236_project/src/main/java/edu/ucr/cs/cs236/App.java` to understand the structure of the code, and complete the TODO sections to write your results. Your results should be in `CS236_project/<your_output_directory_name>/part-r-00000`. To do the visualization, put the output file in the `data` directory of your Spark environment and use Python & Pandas to visualize it the same way you did for Spark.
+
 ## Project Info
 
-In this project you will be looking at food environment data, such as proximity to a grocery store, restaurant, etc. over different areas in the United States. Read the [documentation](https://www.ers.usda.gov/data-products/food-environment-atlas/documentation/) to help understand the data before continuing.
+In this project you will be looking at food environment data, such as proximity to a grocery store, restaurant, etc. over different areas in the United States. Read the [documentation](https://www.ers.usda.gov/data-products/food-environment-atlas/documentation/) to help understand the data before continuing. You will be performing these tasks in both Hadoop, then Spark.
+
+It is recommended but not required to do the task in Spark first since the syntax is simpler.
 
 ### Getting Started
 
@@ -84,12 +125,12 @@ Open `src/tutorial.ipynb` in Jupyter Lab and experiment with the PySpark tools, 
 
 ### Task 1
 
-When working with real-world data, you will encounter dirty data. This could be either due to the nature of the data, or simple human error. For this task, use PySpark to get the total population in each state by summing the populations from its counties (from `SupplementalDataCounty.csv`). State population already exists, but use the county data as an exercise. This data has some issues, so you will have to do some cleaning to properly visualize it.
+When working with real-world data, you will encounter dirty data. This could be either due to the nature of the data, or simple human error. For this task, get the total population in each state in `2010` by summing the populations from its counties (from `SupplementalDataCounty.csv`). State population data already exists, but use the county data as an exercise. This data has some issues, so you will have to do some cleaning to properly visualize it.
 
-In your report, write what issues you came across, and how you solved them. Include a screenshot of the resulting choropleth map that you created from this data.
+In your report, write what issues you came across, and how you solved them. Include a screenshot of the resulting choropleth map that you created from this data. Also include the runtimes of the computation for both Spark and Hadoop (use `%%timeit` and all in 1 cell for Spark). This includes file reading, the computation, and file writing.
 
 ### Task 2
 
-After reading through the `variable list` file, compare the average number of grocery stores available per 1000 people  in each state, in 2011 and 2016. Vizualize this comparison in a double bar graph `for the states with the largest change`.
+After reading through the `variable list` file, compare the average number of grocery stores available per 1000 people in each state, in 2011 and 2016. Vizualize this before-and-after in a double bar graph ([see method 1](https://www.geeksforgeeks.org/plot-multiple-columns-of-pandas-dataframe-on-bar-chart-with-matplotlib/)) `for the 3 states with the largest change between the years`.
 
 In your report, include a screenshot of the bar graph.
