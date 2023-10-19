@@ -1,3 +1,4 @@
 FROM jupyter/pyspark-notebook
 
-RUN pip install plotly geopandas
+RUN conda install -c conda-forge geopandas
+RUN pip install plotly
