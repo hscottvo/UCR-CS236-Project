@@ -1,14 +1,3 @@
-# FROM ubuntu:latest
-# # Update the package manager
-# RUN apt update
-
-# # Install Java (OpenJDK)
-# RUN apt install -y openjdk-8-jdk 
-
-# # Install Maven
-# RUN apt install maven -y
-
-# CMD ["/bin/bash"]
 # Use an Ubuntu base image
 FROM ubuntu:20.04
 
@@ -17,8 +6,6 @@ ENV HADOOP_HOME /opt/hadoop
 ENV PATH $PATH:$HADOOP_HOME/bin
 
 ENV JAVA_HOME /usr/lib/jvm/java-1.8.0-openjdk-amd64
-# If you're on an M1 or M2 mac, use the below instead
-# ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-arm64
 ENV PATH $JAVA_HOME/bin:$PATH
 
 
