@@ -14,6 +14,7 @@
     - [Getting Started](#getting-started)
     - [Task 1](#task-1)
     - [Task 2](#task-2)
+  - [Acknowledgements](#acknowledgements)
 
 For this project, you will be using [Spark](https://spark.apache.org/), a big data framework that allows developers to process massive amounts of data with parallelism and fault tolerance included by default. You will be utilizing [Docker](https://www.docker.com/) to run this on your local machine.
 
@@ -127,10 +128,16 @@ Open `src/tutorial.ipynb` in Jupyter Lab and experiment with the PySpark tools, 
 
 When working with real-world data, you will encounter dirty data. This could be either due to the nature of the data, or simple human error. For this task, get the total population in each state in `2010` by summing the populations from its counties (from `SupplementalDataCounty.csv`). State population data already exists, but use the county data as an exercise. This data has some issues, so you will have to do some cleaning to properly visualize it.
 
+As stated above, the template code for Hadoop has some TODOs to complete. These TODOs have to do with this task.
+
 In your report, write what issues you came across, and how you solved them. Include a screenshot of the resulting choropleth map that you created from this data. Also include the runtimes of the computation for both Spark and Hadoop (use `%%timeit` and all in 1 cell for Spark). This includes file reading, the computation, and file writing.
 
 ### Task 2
 
 After reading through the `variable list` file, compare the average number of grocery stores available per 1000 people in each state, in 2011 and 2016. Vizualize this before-and-after in a double bar graph ([see method 1](https://www.geeksforgeeks.org/plot-multiple-columns-of-pandas-dataframe-on-bar-chart-with-matplotlib/)) `for the 3 states with the largest change between the years`.
 
-In your report, include a screenshot of the bar graph.
+In your report, include a screenshot of the bar graph. Record runtimes in the same way as task 1.
+
+## Acknowledgements
+
+Parts of the setup, template code, and running instructions were adapted with permission from Professor Eldawy's big-data lab materials.
