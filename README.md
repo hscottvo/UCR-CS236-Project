@@ -85,7 +85,7 @@ You will be using Jupyter Notebook to run your Python/PySpark code. See the [Jup
 
 Running Hadoop code is a little more complicated. First, download the [Hadoop binaries](https://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz) and put the file in the `hadoop/` directory. Then, run `docker compose build`. This will take about 10 minutes.
 
-To start the Docker container, uuuuu the command `docker compose up -d`. Note that we add `-d`. This is because we want to run the container in detached mode so we can use the same terminal while the container runs. To run the code, we will run bash inside the container.
+To start the Docker container, run the command `docker compose up -d`. Note that we add `-d`. This is because we want to run the container in detached mode so we can use the same terminal while the container runs. To run the code, we will run bash inside the container.
 
 Run the command `docker compose exec hadoop bash` to run bash int he container. Then, go to `/home/CS236_project`.
 
