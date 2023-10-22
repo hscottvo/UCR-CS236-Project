@@ -47,7 +47,7 @@ To see point distributions, see the [rubric](#rubric)
       them `task_1.java` and `task_2.java` respectively.
    2. The Jupyter notebooks that include your PySpark code for both tasks. Name
       them `task_1.ipynb` and `task_2.ipynb` respectively.
-2. A brief and concise report following this
+2. A brief and concise report PDF following this
    [template](https://docs.google.com/document/d/1Gz_E2v0NX8AwgynNcu9yMvuS6gGkUVkG1jS_hVPM8x4/edit?usp=sharing)
 
 3. A 15-minute demo for the project with the TA scheduled on Google sheets,
