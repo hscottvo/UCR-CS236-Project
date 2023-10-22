@@ -46,8 +46,9 @@ names and SIDs by Friday, 27 October 2023.
       them `task_1.ipynb` and `task_2.ipynb` respectively.
 2. A report detailing
    1. Each team member's contribution
-   2. Which framework worked better for each task, and why you think it did
+   2. Which methods worked better for each task, and why you think it did
    3. Outputs of the code as detailed in [task 1](#task-1) and [task 2](#task-2)
+   4. Runtimes for Spark using RDDs, Spark using SQL, and Hadoop
 3. A 15-minute demo for the project with the TA scheduled on Google sheets,
    which will be shared on Canvas
 
@@ -206,7 +207,8 @@ syntax is simpler.
 
 Open `src/tutorial.ipynb` in Jupyter Lab and experiment with the PySpark tools,
 as well as the data. You will learn some basics of how to process data, and
-visualize it.
+visualize it. Compare the performance of Spark using SQL and RDDs, as well as
+Hadoop.
 
 ### Task 1
 
@@ -222,9 +224,9 @@ TODOs have to do with this task.
 
 In your report, write what issues you came across, and how you solved them.
 Include a screenshot of the resulting choropleth map that you created from this
-data. Also include the runtimes of the computation for both Spark and Hadoop
-(use `%%timeit` and all in 1 cell for Spark). This includes file reading, the
-computation, and file writing.
+data. Also include the runtimes of the computation for Spark using both SQL and
+RDDs, and Hadoop. (use `%%timeit` and all in 1 cell for Spark). This includes
+file reading, the computation, and file writing.
 
 ### Task 2
 
