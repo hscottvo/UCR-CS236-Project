@@ -44,11 +44,13 @@ names and SIDs by Friday, 27 October 2023.
       them `task_1.java` and `task_2.java` respectively.
    2. The Jupyter notebooks that include your PySpark code for both tasks. Name
       them `task_1.ipynb` and `task_2.ipynb` respectively.
-2. A report detailing
-   1. Each team member's contribution
-   2. Which methods worked better for each task, and why you think it did
-   3. Outputs of the code as detailed in [task 1](#task-1) and [task 2](#task-2)
-   4. Runtimes for Spark using RDDs, Spark using SQL, and Hadoop
+2. A report with
+   1. Following this
+      [template](https://docs.google.com/document/d/1Gz_E2v0NX8AwgynNcu9yMvuS6gGkUVkG1jS_hVPM8x4/edit?usp=sharing)
+   2. Each team member's contribution
+   3. Which methods worked better for each task, and why you think it did
+   4. Outputs of the code as detailed in [task 1](#task-1) and [task 2](#task-2)
+   5. Runtimes for Spark using RDDs, Spark using SQL, and Hadoop
 3. A 15-minute demo for the project with the TA scheduled on Google sheets,
    which will be shared on Canvas
 
