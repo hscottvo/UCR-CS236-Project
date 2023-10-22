@@ -1,6 +1,10 @@
 # UCR-CS236-Project
 
 - [UCR-CS236-Project](#ucr-cs236-project)
+  - [Logistics](#logistics)
+    - [Due Date](#due-date)
+    - [Team and Setup](#team-and-setup)
+    - [Deliverables](#deliverables)
   - [Setup](#setup)
     - [Docker Setup](#docker-setup)
     - [Project Setup](#project-setup)
@@ -18,6 +22,27 @@
 
 For this project, you will be using [Spark](https://spark.apache.org/), a big data framework that allows developers to process massive amounts of data with parallelism and fault tolerance included by default. You will be utilizing [Docker](https://www.docker.com/) to run this on your local machine.
 
+## Logistics
+
+### Due Date
+
+This project will be due on 13 December 2023 at 11:59PM. 15-minute demos are required. See Deliverables below for scheduling details.
+
+### Team and Setup
+
+This project will be completed in pairs. Provide the TA with both students' names and SIDs by Friday, 27 October 2023.
+
+### Deliverables
+
+1. A zipped file containing:
+   1. The `App.java` files that include your Hadoop code for both tasks. Name them `task_1.java` and `task_2.java` respectively.
+   2. The Jupyter notebooks that include your PySpark code for both tasks. Name them `task_1.ipynb` and `task_2.ipynb` respectively.
+2. A report detailing
+   1. Each team member's contribution
+   2. Which framework worked better for each task, and why you think it did
+   3. Outputs of the code as detailed in [task 1](#task-1) and [task 2](#task-2)
+3. A 15-minute demo for the project with the TA scheduled on Google sheets, which will be shared on Canvas
+
 ## Setup
 
 In this project, the only setup required is:
@@ -32,7 +57,7 @@ Go to [the Docker website](https://www.docker.com/get-started/), download the in
 
 ### Project Setup
 
-Clone this repository and cd into it. You will see `<framework>/data/`, which will be where you put your data files. You will also see `spark/src/` and `hadoop/CS236_project`, where your notebooks will be.
+Clone this repository and cd into it. Create the directories `hadoop/data/` and `spark/data`, which will be where you put your data files. You will also see `spark/src/` and `hadoop/CS236_project`, where your notebooks will be.
 
 ### Getting Data
 
@@ -65,7 +90,7 @@ ports:
 
 ### Spark
 
-To run the Spark environment in Jupyter Notebook, run `docker compose build`, then `docker compose up` in your terminal, in the same directory as `docker-compose.yml`. For future runs, you only need to run `docker compose up`.
+To run the Spark environment in Jupyter Notebook, run `docker compose build`, then `docker compose up` in your terminal, in the same directory as `docker-compose.yml`. For future runs, you only need to run `docker compose up`. Running the build for the first time may take 5-10 minutes.
 
 Look for this text in the terminal output:
 
@@ -83,7 +108,7 @@ You will be using Jupyter Notebook to run your Python/PySpark code. See the [Jup
 
 ### Hadoop
 
-Running Hadoop code is a little more complicated. First, download the [Hadoop binaries](https://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz) and put the file in the `hadoop/` directory. Then, run `docker compose build`. This will take about 10 minutes.
+Running Hadoop code is a little more complicated. First, download the [Hadoop binaries](https://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz) and put the file in the `hadoop/` directory. Do not decompress the file. Then, run `docker compose build`. This will take about 10 minutes.
 
 To start the Docker container, run the command `docker compose up -d`. Note that we add `-d`. This is because we want to run the container in detached mode so we can use the same terminal while the container runs. To run the code, we will run bash inside the container.
 
