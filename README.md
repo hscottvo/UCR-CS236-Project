@@ -51,7 +51,7 @@ To see point distributions, see the [rubric](#rubric)
    [template](https://docs.google.com/document/d/1Gz_E2v0NX8AwgynNcu9yMvuS6gGkUVkG1jS_hVPM8x4/edit?usp=sharing)
 
 3. A 15-minute demo for the project with the TA scheduled on Google sheets,
-   which will be shared on Canvas
+   which will be shared on Canvas. Demos will be held on 14 and 15 December.
 
 ## Setup
 
