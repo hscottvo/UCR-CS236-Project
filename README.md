@@ -14,6 +14,7 @@
     - [Hadoop](#hadoop)
       - [Note for Mac users with Apple Silicon (M1 and M2)](#note-for-mac-users-with-apple-silicon-m1-and-m2)
       - [Hadoop (Continued)](#hadoop-continued)
+    - [Important - Closing Docker containers](#important---closing-docker-containers)
   - [Project Info](#project-info)
     - [Getting Started](#getting-started)
     - [Task 1](#task-1)
@@ -191,6 +192,12 @@ your results. Your results should be in
 visualization, put the output file in the `data` directory of your Spark
 environment and use Python & Pandas to visualize it the same way you did for
 Spark.
+
+### Important - Closing Docker containers
+
+When you are finishing running your code, CTRL+C docker compose for Spark. For
+both Docker containers, make sure to run the command `docker compose down`. You
+will not lose any saved files.
 
 ## Project Info
 
