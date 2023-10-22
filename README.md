@@ -18,6 +18,7 @@
     - [Getting Started](#getting-started)
     - [Task 1](#task-1)
     - [Task 2](#task-2)
+  - [Rubric](#rubric)
   - [Acknowledgements](#acknowledgements)
 
 For this project, you will be using [Spark](https://spark.apache.org/), a big
@@ -39,18 +40,16 @@ names and SIDs by Friday, 27 October 2023.
 
 ### Deliverables
 
+To see point distributions, see the [rubric](#rubric)
+
 1. A zipped file containing:
    1. The `App.java` files that include your Hadoop code for both tasks. Name
       them `task_1.java` and `task_2.java` respectively.
    2. The Jupyter notebooks that include your PySpark code for both tasks. Name
       them `task_1.ipynb` and `task_2.ipynb` respectively.
-2. A report with
-   1. Following this
-      [template](https://docs.google.com/document/d/1Gz_E2v0NX8AwgynNcu9yMvuS6gGkUVkG1jS_hVPM8x4/edit?usp=sharing)
-   2. Each team member's contribution
-   3. Which methods worked better for each task, and why you think it did
-   4. Outputs of the code as detailed in [task 1](#task-1) and [task 2](#task-2)
-   5. Runtimes for Spark using RDDs, Spark using SQL, and Hadoop
+2. A brief and concise report following this
+   [template](https://docs.google.com/document/d/1Gz_E2v0NX8AwgynNcu9yMvuS6gGkUVkG1jS_hVPM8x4/edit?usp=sharing)
+
 3. A 15-minute demo for the project with the TA scheduled on Google sheets,
    which will be shared on Canvas
 
@@ -209,8 +208,7 @@ syntax is simpler.
 
 Open `src/tutorial.ipynb` in Jupyter Lab and experiment with the PySpark tools,
 as well as the data. You will learn some basics of how to process data, and
-visualize it. Compare the performance of Spark using SQL and RDDs, as well as
-Hadoop.
+visualize it. Compare the performance of Spark SQL and RDDs, as well as Hadoop.
 
 ### Task 1
 
@@ -240,6 +238,27 @@ Vizualize this before-and-after in a double bar graph
 
 In your report, include a screenshot of the bar graph. Record runtimes in the
 same way as task 1.
+
+## Rubric
+
+| Item                                     | Deliverable       | Description                                                      | Points  |
+| :--------------------------------------- | :---------------- | :--------------------------------------------------------------- | ------- |
+| Code Submission                          | canvas submission | Zip file contents are correctly named and include required files | 5       |
+| Template                                 | report            | Report follows template                                          | 3       |
+| Team Member Names                        | report            | Includes complete information for each team member               | 2       |
+| Contributions                            | report            | Describe each team member's contributions                        | 5       |
+| Task 1 Content                           | report            | Includes screenshot, what data cleaning was done, and runtimes   | 10      |
+| Task 2 Content                           | report            | Includes screenshot and runtimes                                 | 10      |
+| Method Comparison - Runtime              | report            | Compare relative runtimes for each task for each method and why  | 10      |
+| Method Comparison - Developer Experience | report            | Compare which method was most comfortable to code and why        | 10      |
+| Preparedness                             | demo              | Code should be ready to run during the demo                      | 3       |
+| Task 1 Code                              | demo              | Brief code walkthrough detailing how you implemented each method | 7       |
+| Task 1 Output                            | demo              | Show job run and correct outputs with all 3 methods              | 7       |
+| Task 1 Visualization                     | demo              | Visualization is interpretable                                   | 7       |
+| Task 2 Code                              | demo              | Brief code walkthrough detailing how you implemented each method | 7       |
+| Task 2 Output                            | demo              | Show job run and correct outputs with all 3 methods              | 7       |
+| Task 2 Visualization                     | demo              | Visualization is interpretable                                   | 7       |
+| **Total**                                |                   |                                                                  | **100** |
 
 ## Acknowledgements
 
