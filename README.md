@@ -22,10 +22,11 @@
   - [Rubric](#rubric)
   - [Acknowledgements](#acknowledgements)
 
-For this project, you will be using [Spark](https://spark.apache.org/), a big
-data framework that allows developers to process massive amounts of data with
-parallelism and fault tolerance included by default. You will be utilizing
-[Docker](https://www.docker.com/) to run this on your local machine.
+For this project, you will be using [Spark](https://spark.apache.org/) and
+[Hadoop](https://hadoop.apache.org/), big data frameworks that allow developers
+to process massive amounts of data with parallelism and fault tolerance included
+by default. You will be utilizing [Docker](https://www.docker.com/) to run this
+on your local machine.
 
 ## Logistics
 
@@ -241,7 +242,7 @@ After reading through the `variable list` file, compare the average number of
 grocery stores available per 1000 people in each state, in 2011 and 2016.
 Vizualize this before-and-after in a double bar graph
 ([see method 1](https://www.geeksforgeeks.org/plot-multiple-columns-of-pandas-dataframe-on-bar-chart-with-matplotlib/))
-`for the 3 states with the largest change between the years`.
+`for the 3 states with the largest positive change between the years`.
 
 In your report, include a screenshot of the bar graph. Record runtimes in the
 same way as task 1.
