@@ -157,7 +157,7 @@ we add `-d`. This is because we want to run the container in detached mode so we
 can use the same terminal while the container runs. To run the code, we will run
 bash inside the container.
 
-Run the command `docker compose exec hadoop bash` to run bash int he container.
+Run the command `docker compose exec hadoop bash` to run bash in the container.
 Then, go to `/home/CS236_project`.
 
 #### Note for Mac users with Apple Silicon (M1 and M2)
